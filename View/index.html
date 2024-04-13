@@ -8,8 +8,10 @@
 <body>
 <h1>Current Score:</h1>
 <pre id="score"></pre>
+<button onclick="myJavascriptFunction()">Click me</button>
 
-<script>
+<script type="text/javascript">
+    function myJavascriptFunction() {
     const apiUrl = 'https://3ydb3m9sxc.execute-api.us-east-1.amazonaws.com/Default/get-score?teamName=josh';
 
     // Make a GET request
@@ -27,6 +29,7 @@
         .catch(error => {
             console.error('Error:', error);
         });
+    }
 </script>
 </body>
 </html>
