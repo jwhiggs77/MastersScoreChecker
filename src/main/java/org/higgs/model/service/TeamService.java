@@ -1,8 +1,5 @@
 package org.higgs.model.service;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class TeamService {
     public static int[] getTeamPlayerIds(String teamName) {
         switch (teamName) {
