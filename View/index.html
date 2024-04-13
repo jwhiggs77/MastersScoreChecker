@@ -7,29 +7,51 @@
 </head>
 <body>
 <h1>Current Score:</h1>
-<pre id="score"></pre>
-<button onclick="myJavascriptFunction()">Click me</button>
+<p id="score"></p>
+<button onclick="getJoshScore()">Get Joshua's score</button>
+<button onclick="getJoshScore()">Get Joshua's score</button>
+</body>
 
 <script type="text/javascript">
-    function myJavascriptFunction() {
-    const apiUrl = 'https://3ydb3m9sxc.execute-api.us-east-1.amazonaws.com/Default/get-score?teamName=josh';
+  function myJavascriptFunction() {
+  const apiUrl = 'https://3ydb3m9sxc.execute-api.us-east-1.amazonaws.com/Default/get-score?teamName=josh';
 
-    // Make a GET request
-    fetch(apiUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Display the response data
-            document.getElementById('score').textContent = JSON.stringify(data, null, 2);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-    }
+  // Make a GET request
+  fetch(apiUrl)
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.json();
+      })
+      .then(data => {
+          // Display the response data
+          document.getElementById('score').textContent = JSON.stringify(data, null, 2);
+      })
+      .catch(error => {
+          console.error('Error:', error);
+      });
+  }
+
+  function myJavascriptFunction() {
+  const apiUrl = 'https://3ydb3m9sxc.execute-api.us-east-1.amazonaws.com/Default/get-score?teamName=jim';
+
+  // Make a GET request
+  fetch(apiUrl)
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.json();
+      })
+      .then(data => {
+          // Display the response data
+          document.getElementById('score').textContent = JSON.stringify(data, null, 2);
+      })
+      .catch(error => {
+          console.error('Error:', error);
+      });
+  }
 </script>
-</body>
+
 </html>
